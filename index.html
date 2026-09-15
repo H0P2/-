@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="김희망의 인터랙티브 3D 개인 사이트">
+  <title>김희망 — Interactive 3D Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#home" data-section="home" aria-label="홈으로">
+        <span class="brand-mark">✦</span>
+        <span><strong>김희망</strong><small>Dreams · Learning · Growth</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <button data-section="home" class="active">홈</button>
+        <button data-section="about">소개</button>
+        <button data-section="strengths">강점 & 취향</button>
+        <button data-section="experience">경험</button>
+        <button data-section="likes">좋아하는 것</button>
+        <button data-section="projects">프로젝트</button>
+        <button data-section="visitor">방문자 기록</button>
+      </nav>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" title="조명 전환" aria-label="조명 전환">☼</button>
+      </div>
+    </header>
+
+    <aside class="side-nav" aria-label="빠른 이동">
+      <button data-section="home" class="active"><span>⌂</span>홈</button>
+      <button data-section="about"><span>◎</span>소개</button>
+      <button data-section="strengths"><span>✧</span>강점 & 취향</button>
+      <button data-section="experience"><span>◈</span>경험</button>
+      <button data-section="likes"><span>♢</span>좋아하는 것</button>
+      <button data-section="projects"><span>⌘</span>프로젝트</button>
+      <button data-section="visitor"><span>◉</span>방문자 기록</button>
+    </aside>
+
+    <main>
+      <section id="home" class="hero section-panel visible">
+        <div class="hero-copy">
+          <p class="eyebrow">AN INTERACTIVE PERSONAL SPACE</p>
+          <h1>안녕하세요,<br><em>김희망</em>입니다.</h1>
+          <p class="lead">꿈을 향해 오늘도 한 걸음 더.<br>배우고, 경험하고, 성장하는 평범하지만 특별한 사람.</p>
+          <button class="primary" data-section="about">더 알아보기 <span>↓</span></button>
+        </div>
+
+        <div class="floating-cards">
+          <button class="info-card" data-section="strengths">
+            <span class="card-icon">♟</span><span><b>강점 & 취향</b><small>My Strengths & Interests</small></span><i>→</i>
+          </button>
+          <button class="info-card" data-section="experience">
+            <span class="card-icon">♣</span><span><b>경험</b><small>My Experiences</small></span><i>→</i>
+          </button>
+          <button class="info-card" data-section="likes">
+            <span class="card-icon">✺</span><span><b>좋아하는 것</b><small>My Likes</small></span><i>→</i>
+          </button>
+          <button class="info-card" data-section="projects">
+            <span class="card-icon">⌘</span><span><b>프로젝트</b><small>My Projects</small></span><i>→</i>
+          </button>
+        </div>
+      </section>
+
+      <section id="about" class="content-section section-panel">
+        <div class="content-card">
+          <p class="eyebrow">ABOUT ME</p><h2>나를 한 문장으로 표현한다면</h2>
+          <p class="big-copy">“궁금한 것을 그냥 지나치지 않고, 직접 만들어 보면서 배우는 사람.”</p>
+          <div class="grid-3">
+            <article><span>01</span><h3>배움</h3><p>새로운 기술과 개념을 직접 실습하며 이해합니다.</p></article>
+            <article><span>02</span><h3>탐험</h3><p>정답이 정해지지 않은 문제를 구조화하고 해결합니다.</p></article>
+            <article><span>03</span><h3>성장</h3><p>작은 개선을 반복해 결과물을 더 좋은 방향으로 발전시킵니다.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="strengths" class="content-section section-panel">
+        <div class="content-card">
+          <p class="eyebrow">STRENGTHS & INTERESTS</p><h2>강점과 취향</h2>
+          <div class="timeline">
+            <article><b>01 · 문제 해결</b><span>상황</span><p>네트워크 실습에서 연결이 되지 않는 문제를 만남</p><span>행동</span><p>인터페이스 상태·IP·라우팅 테이블을 단계적으로 확인</p><span>결과</span><p>원인을 좁혀 설정을 수정하고 정상 통신을 확인</p></article>
+            <article><b>02 · 만들면서 배우기</b><span>상황</span><p>웹 기술을 단순히 읽는 것보다 실제 결과물이 필요함</p><span>행동</span><p>HTML/CSS/JS와 데이터 저장 기능을 직접 연결</p><span>결과</span><p>방문 행동까지 기록하는 개인 사이트 프로토타입 완성</p></article>
+            <article><b>03 · 새로운 기술 탐색</b><span>상황</span><p>평범한 포트폴리오와 다른 표현 방식을 찾음</p><span>행동</span><p>3D 인터랙션과 새로운 웹 기술을 직접 실험</p><span>결과</span><p>정보를 읽는 사이트에서 탐험하는 사이트로 확장</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="content-section section-panel">
+        <div class="content-card"><p class="eyebrow">EXPERIENCE</p><h2>경험</h2>
+          <div class="experience-list">
+            <div><strong>NETWORK LAB</strong><h3>Cisco 라우팅 · 스위칭 실습</h3><p>OSPF, RIP, NAT/PAT, VLAN, VPN 등을 토폴로지 기반으로 구성하고 트러블슈팅.</p></div>
+            <div><strong>WEB LAB</strong><h3>개인 웹사이트 제작</h3><p>반응형 UI부터 IndexedDB 기반 방문 행동 기록까지 단계적으로 구현.</p></div>
+            <div><strong>DATA LAB</strong><h3>방문 행동 데이터 실험</h3><p>브라우저의 IndexedDB를 활용해 방문자가 관심을 보인 영역을 기록하고 시각화.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="likes" class="content-section section-panel">
+        <div class="content-card"><p class="eyebrow">MY LIKES</p><h2>좋아하는 것들</h2>
+          <div class="likes-grid"><div>🌌<b>새로운 기술</b><small>직접 써보고 원리를 이해하기</small></div><div>🎧<b>음악</b><small>집중할 때 나만의 플레이리스트</small></div><div>🌆<b>도시와 풍경</b><small>낯선 공간을 천천히 탐험하기</small></div><div>☕<b>조용한 시간</b><small>생각을 정리하고 다음 것을 계획하기</small></div></div>
+        </div>
+      </section>
+
+      <section id="projects" class="content-section section-panel">
+        <div class="content-card"><p class="eyebrow">PROJECTS</p><h2>만들고 있는 것들</h2>
+          <div class="project-grid"><article><span>01</span><h3>3D Personal Space</h3><p>Three.js 기반 인터랙티브 개인 공간. 마우스/키보드로 탐험하고 오브젝트를 클릭합니다.</p></article><article><span>02</span><h3>Self-learning Profile</h3><p>IndexedDB로 방문 행동을 저장하고 관심 패턴을 발견하는 개인 사이트.</p></article><article><span>03</span><h3>Interactive Portfolio</h3><p>섹션 탐색, 3D 오브젝트 클릭, 조명 전환을 하나의 경험으로 연결한 개인 페이지.</p></article></div>
+        </div>
+      </section>
+
+      <section id="visitor" class="content-section section-panel">
+        <div class="content-card"><p class="eyebrow">VISITOR INSIGHT</p><h2>방문자 기록</h2>
+          <div class="stats"><div><strong id="visitCount">0</strong><span>방문 횟수</span></div><div><strong id="clickCount">0</strong><span>상호작용</span></div><div><strong id="topInterest">-</strong><span>관심 영역</span></div></div>
+          <p class="privacy">이 데모는 방문 행동을 브라우저의 IndexedDB에만 저장합니다. 서버로 전송하지 않습니다.</p>
+        </div>
+      </section>
+    </main>
+
+    <div id="scene"></div>
+    <div class="scene-help">🖱 마우스로 드래그하여 둘러보세요 · 휠로 확대/축소 · 오브젝트를 클릭해보세요</div>
+    <div class="visitor-pill">● 방문자 <b id="liveVisit">1</b> <span>↗</span></div>
+
+
+    <div class="toast" id="toast"></div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
