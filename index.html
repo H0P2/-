@@ -105,7 +105,7 @@
 
       <section id="projects" class="content-section section-panel">
         <div class="content-card"><p class="eyebrow">PROJECTS</p><h2>만들고 있는 것들</h2>
-          <div class="project-grid"><article><span>01</span><h3>3D Personal Space</h3><p>Three.js 기반 인터랙티브 개인 공간. 마우스/키보드로 탐험하고 오브젝트를 클릭합니다.</p></article><article><span>02</span><h3>Self-learning Profile</h3><p>IndexedDB로 방문 행동을 저장하고 관심 패턴을 발견하는 개인 사이트.</p></article><article><span>03</span><h3>Interactive Portfolio</h3><p>섹션 탐색, 3D 오브젝트 클릭, 조명 전환을 하나의 경험으로 연결한 개인 페이지.</p></article></div>
+          <div class="project-grid"><article><span>01</span><h3>3D Personal Space</h3><p>Three.js 기반 인터랙티브 개인 공간. 마우스/키보드로 탐험하고 오브젝트를 클릭합니다.</p><button class="archive-open" type="button" aria-haspopup="dialog" aria-label="3D Personal Space 자세히 보기">자세히 보기 ↗</button></article><article><span>02</span><h3>Self-learning Profile</h3><p>IndexedDB로 방문 행동을 저장하고 관심 패턴을 발견하는 개인 사이트.</p><button class="archive-open" type="button" aria-haspopup="dialog" aria-label="Self-learning Profile 자세히 보기">자세히 보기 ↗</button></article><article><span>03</span><h3>Interactive Portfolio</h3><p>섹션 탐색, 3D 오브젝트 클릭, 조명 전환을 하나의 경험으로 연결한 개인 페이지.</p><button class="archive-open" type="button" aria-haspopup="dialog" aria-label="Interactive Portfolio 자세히 보기">자세히 보기 ↗</button></article></div>
         </div>
       </section>
 
@@ -125,5 +125,14 @@
     <div class="toast" id="toast"></div>
   </div>
   <script type="module" src="script.js?v=nav-repair-2"></script>
+<dialog id="archive-dialog" aria-labelledby="archive-title" aria-describedby="archive-description"><form method="dialog"><button class="archive-close" aria-label="상세 팝업 닫기">✕</button></form><p class="archive-eyebrow">PROJECT ARCHIVE</p><h2 id="archive-title"></h2><p id="archive-description"></p><p class="archive-note">이 항목은 기존 소개 페이지에 작성한 프로젝트 기록입니다.</p></dialog>
+<style>
+.project-grid article{position:relative;display:flex;flex-direction:column}.archive-open{margin-top:auto;padding:12px 0 0;text-align:left;color:#b8c5ff;font-size:12px}.archive-open::after{content:"";position:absolute;inset:0;border-radius:18px}.project-grid article:has(.archive-open:focus-visible){outline:3px solid #b8c5ff;outline-offset:4px}.project-grid article:hover{background:#ffffff12;border-color:#a0afff80}#archive-dialog{position:fixed;width:min(560px,calc(100% - 40px));max-height:calc(100svh - 60px);padding:36px;border:1px solid #616eaa;border-radius:22px;background:#10172e;color:#f7f8ff;box-shadow:0 30px 100px #0008}#archive-dialog::backdrop{background:#030616bf;backdrop-filter:blur(8px)}#archive-dialog h2{font-size:26px;margin:16px 0 22px}#archive-description{font-size:14px;line-height:1.9;color:#c8ccdf}.archive-close{position:absolute;right:12px;top:12px;padding:12px;font-size:18px}.archive-eyebrow{font-size:10px;letter-spacing:2px;color:#a9b7ff}.archive-note{font-size:11px;color:#a0a8c3;margin-top:26px}
+</style>
+<script>
+const archiveDialog=document.querySelector('#archive-dialog');
+document.querySelectorAll('.archive-open').forEach(button=>button.addEventListener('click',()=>{const card=button.closest('article');document.querySelector('#archive-title').textContent=card.querySelector('h3').textContent;document.querySelector('#archive-description').textContent=card.querySelector('p').textContent;archiveDialog.showModal();}));
+archiveDialog.addEventListener('click',event=>{if(event.target!==archiveDialog)return;const r=archiveDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)archiveDialog.close();});
+</script>
 </body>
 </html>
