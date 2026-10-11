@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="김희망의 인터랙티브 3D 개인 사이트">
   <title>김희망 — Interactive 3D Space</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=nav-repair-2">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head>
 <body>
   <div id="app">
@@ -23,7 +24,7 @@
         <button data-section="projects">프로젝트</button>
         <button data-section="visitor">방문자 기록</button>
       </nav>
-      <div class="top-actions">
+      <div class="top-actions"><button class="home-return" data-section="home" type="button">홈으로</button>
         <button class="icon-btn" id="themeBtn" title="조명 전환" aria-label="조명 전환">☼</button>
       </div>
     </header>
@@ -123,6 +124,6 @@
 
     <div class="toast" id="toast"></div>
   </div>
-  <script type="module" src="script.js"></script>
+  <script type="module" src="script.js?v=nav-repair-2"></script>
 </body>
 </html>

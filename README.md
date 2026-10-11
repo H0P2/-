@@ -20,9 +20,13 @@ AI 서버 없이 **GitHub Pages에서 바로 배포할 수 있는 정적 3D 개�
 ## 파일
 - `index.html` — 페이지 구조
 - `style.css` — 디자인
-- `script.js` — 3D 장면, 인터랙션, IndexedDB
+- `script.js` — 독립적인 메뉴 이동, IndexedDB, 3D 실패 안내
+- `scene.js` — Three.js 장면과 카메라/조명 인터랙션
 
 ## 개인정보
 방문 행동 데이터는 서버로 전송하지 않고 각 방문자의 브라우저 IndexedDB에 저장됩니다.
 
 > 현재 버전에는 Node.js 서버, OpenAI API, API 키, `.env`가 필요하지 않습니다.
+
+## 클릭 오류 수정
+3D 외부 라이브러리의 bare module 경로를 import map으로 연결했습니다. 소개/프로젝트 이동은 별도 모듈로 분리해 3D나 IndexedDB를 불러오지 못해도 사용할 수 있습니다. 홈 숨김, 모바일 홈 복귀 버튼, 고정 안내 겹침과 데스크톱 카드 배치도 수정했습니다.
